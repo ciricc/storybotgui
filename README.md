@@ -18,7 +18,7 @@ git clone https://github.com/ciricc/storybotgui.git && cd storybotgui
 Далее необходимо запустить build
 
 ```shell
-npm run build
+npm i && npm run build
 ```
 
 Теперь вы можете запускать готовый exe файл из папки `dist`
