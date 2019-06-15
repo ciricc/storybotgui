@@ -10,9 +10,8 @@ window.navHistory = [];
 history.length = 0;
 
 history.listen((loc, act, a) => {
-  console.log(a)
   if (act === "PUSH") {
-    window.navHistory.push(loc)
+    window.navHistory.push(loc);
     history.length += 1;
     window.globalHistoryLength += 1;
   } else if (act === "POP") {
@@ -20,7 +19,6 @@ history.listen((loc, act, a) => {
     window.globalHistoryLength -= 1;
     history.length -= 1
   }
-
 })
 
 export default history;

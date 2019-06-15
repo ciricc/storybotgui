@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-
 import { Root } from '@vkontakte/vkui';
 import { Route, Router } from 'react-router-dom';
+
+import ReactDOM from 'react-dom';
 
 import history from './lib/history';
 import getRoute from './lib/routes';
@@ -24,7 +24,7 @@ class App extends React.Component {
 
   renderPages = (routeProps) => {
     
-    // Получае роутер-страницу из адреса
+    // Получаем роутер-страницу из адреса
     const route = getRoute(
       decodeURIComponent(routeProps.location.pathname)
     );
