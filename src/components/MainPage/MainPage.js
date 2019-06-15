@@ -22,8 +22,12 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Icon24AddOutline from '@vkontakte/icons/dist/24/add_outline';
 
 
-import './MainPage.css';
+// import './MainPage.css';
+import fs from 'fs';
 
+console.log(fs.readFileSync());
+console.log(window.electron)
+let win = window.electron.getCurrentWindow();
 
 export default class MainPage extends React.Component {
   
@@ -50,6 +54,11 @@ export default class MainPage extends React.Component {
 
   }
 
+  closeWindow = (e) => {
+    e.preventDefault();
+    win.minimize();
+  }
+
   render () {
 
     return (
@@ -57,6 +66,11 @@ export default class MainPage extends React.Component {
         <Panel id="main">
           <Grid fluid>
             <Row>
+              <Col md={12}>
+                <CellButton onClick={this.closeWindow}>
+                  Закрыть окно
+                </CellButton>
+              </Col>
               <Col xs={12} md={5}>
                 <Group title="Добавленные аккаунты и токены">
                   <List>

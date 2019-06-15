@@ -4,14 +4,17 @@ import { Route, Router } from 'react-router-dom';
 
 import ReactDOM from 'react-dom';
 
+// Утилиты и библиотеки
 import history from './lib/history';
 import getRoute from './lib/routes';
 
+// Дополнительные комопненты
 import MainPage from './components/MainPage';
 
+
+
+// Стили
 import '@vkontakte/vkui/dist/vkui.css';
-
-
 import './index.css';
 
 
