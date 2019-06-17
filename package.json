@@ -1,64 +1,50 @@
 {
   "name": "storybotgui",
+  "productName": "Storybot GUI",
   "version": "0.0.1",
-  "private": true,
+  "description": "Storybut, but with GUI",
+  "main": "main.js",
+  "scripts": {
+    "bundle": "webpack --mode development",
+    "serve": "set APP_DEV=true && electron .",
+    "start": "npm-run-all --parallel bundle serve",
+    "build": "webpack --mode production && npm run electron-build",
+    "electron-build": "electron-builder",
+    "production_win_x64": "electron-packager . --prune=true --platform=win32 --arch=x64 --out=release-builds",
+    "production_win_x32": "electron-packager . --prune=true --platform=win32 --arch=x32 --out=release-builds"
+  },
+  "author": "Kirill Novak <renato.etc.etc.etc@gmail.com>",
+  "repository": "ciricc/storybotgui",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^5.0.3",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "electron": "^5.0.4",
     "electron-builder": "^20.43.0",
-    "electron-renderer-react-scripts-target": "^1.1.1",
-    "react-scripts-webpack-config-editor": "^1.0.1"
+    "electron-packager": "^13.1.1",
+    "electron-reload": "^1.4.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.10",
+    "npm-run-all": "^4.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@vkontakte/icons": "^1.4.3",
     "@vkontakte/vkui": "^2.21.5",
-    "concurrently": "^4.1.0",
-    "electron-is-dev": "^1.1.0",
-    "history": "^4.9.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "@vkontakte/vkui-connect": "^1.1.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-flexbox-grid": "^2.1.2",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1",
-    "wait-on": "^3.2.0"
-  },
-  "scripts": {
-    "start-react": "react-scripts start",
-    "start": "npm run electron-dev",
-    "react-build": "react-scripts build",
-    "build": "npm run react-build && npm run electron-build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"npm run start-react\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-build": "electron-builder",
-    "release": "yarn react-build && electron-builder --publish=always"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "main": "public/electron.js",
-  "build": {
-    "appId": "com.example.electron-cra",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    }
-  },
-  "author": "Kirill Novak",
-  "homepage": "./",
-  "description": "Storybut, but with GUI"
+    "style-loader": "^0.23.1"
+  }
 }

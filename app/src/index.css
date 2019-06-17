@@ -1,0 +1,67 @@
+body, html {
+  height: 100%;
+  background-color: #fff;
+}
+
+#root {
+  height: 100%;
+}
+
+.titlebar {
+  -webkit-user-select: none;
+  /* Включаем для того, чтобы за эту область можно было перетаскивать программу */
+  -webkit-app-region: drag;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 2;
+  background-color: rgb(74,118,168);
+  border-bottom: solid 1px #f0f0f0;
+}
+
+.titlebar button {
+  cursor: pointer;
+  color: #fff;
+}
+
+.titlebar .column-title {
+  flex: 1;
+  display: flex;
+}
+
+.titlebar .column-title.title {
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  padding-left: 25px;
+}
+
+.titlebar .column-title.window-controllers {
+  justify-content: flex-end;
+}
+
+/* Отключаем перетаскивание для некоторых элементов */
+button {
+  -webkit-app-region: no-drag;
+}
+
+.Panel--tm-gray .Panel__in {
+  background-color: rgb(237,238,240);
+  padding-top: 48px;
+}
+
+#root > div {
+  height: 100%;
+}
+
+#root > div, .Root, .Panel{
+  min-height: 100%;
+}
+
+.Group {
+  border-radius: 4px;
+  box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+  border: none;
+}
