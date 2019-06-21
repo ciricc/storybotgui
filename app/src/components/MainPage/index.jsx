@@ -62,27 +62,18 @@ export default class MainPage extends React.Component {
               <Col xs={12} md={5}>
                 <Group title="Добавленные аккаунты и токены">
                   <List>
-                   <Cell 
-                    size="l"
-                    description="Стабильно работает"
-                    before={<Avatar src="https://pp.userapi.com/c850232/v850232545/13281c/sUEmokE8378.jpg?ava=1"size={40}/>}
-                    bottomContent={<div style={{display: 'flex'}}><Button size="m">Изменить</Button><Button style={{marginLeft: 8}} size="m" level="secondary">Удалить</Button></div>} >
-                    Кирилл Новак
-                   </Cell>
-                   <Cell 
-                    size="l"
-                    description="Стабильно работает"
-                    before={<Avatar src="https://pp.userapi.com/c639219/v639219895/4d35d/xbxUdzZZLfc.jpg?ava=1"size={40}/>}
-                    bottomContent={<div style={{display: 'flex'}}><Button size="m">Изменить</Button><Button style={{marginLeft: 8}} size="m" level="secondary">Удалить</Button></div>} >
-                    Никита Антоновка
-                   </Cell>
-                   <Cell 
-                    size="l"
-                    description="Стабильно работает"
-                    before={<Avatar src="https://sun1-24.userapi.com/c831109/v831109539/1da1e5/lJwUOitbYMQ.jpg?ava=1"size={40}/>}
-                    bottomContent={<div style={{display: 'flex'}}><Button size="m">Изменить</Button><Button style={{marginLeft: 8}} size="m" level="secondary">Удалить</Button></div>} >
-                    Илья Сивальнев
-                   </Cell>
+                   { this.props.accounts.length ? this.props.accounts.map((account, i) => {
+                    return (
+                      <Cell 
+                      size="l"
+                      key={"account_" + i}
+                      description={ account.status ? "Стабильно работает" : "Есть проблемы" }
+                      before={<Avatar src={account.photo_400 || account.photo_200} size={40}/>}
+                      bottomContent={<div style={{display: 'flex'}}><Button size="m">Изменить</Button><Button style={{marginLeft: 8}} size="m" level="secondary">Удалить</Button></div>} >
+                      {account.first_name} {account.last_name}
+                     </Cell>
+                    );
+                   }) : "" }
                    <Div>
                     <Cell description="Токен группы">
                        <span>52f8522bf28e8dc110b03abec7813e580abf5524205235962a0fb4cd5c8...</span>
@@ -144,5 +135,7 @@ MainPage.propTypes = {
   route: PropTypes.object,
   /** Объект истории браузера */
   history: PropTypes.object,
+  /** СПисок добавленных аккаунтов */
+  accounts: PropTypes.array,
   id: PropTypes.string
 } 

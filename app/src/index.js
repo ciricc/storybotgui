@@ -23,6 +23,7 @@ import './index.css';
 
 
 const electron = window.require('electron').remote;
+const ipc = window.require('electron').ipcRenderer;
 
 class App extends React.Component {
   
@@ -30,6 +31,22 @@ class App extends React.Component {
     super(props);
     this.history = history;
     this.win = electron.getCurrentWindow();
+    this.ipc = ipc;
+
+    this.state = {
+      accounts: [] /** Array */
+    }
+
+    this.ipc.send("get-accounts");
+      
+    /** Получаем список аккаунтов, которые уже добавлены в базу */
+    this.ipc.on("get-accounts-response", (_, response) => {
+      console.log('Получили список аккаунтов', response)
+      this.setState({
+        accounts: response
+      })
+    });
+
   } 
 
   /** Функция для закрытия окна программы */
@@ -85,7 +102,8 @@ class App extends React.Component {
            <MainPage  
             id="mainPage"
             route={route}
-            history={this.history} />
+            history={this.history}
+            accounts={this.state.accounts} />
         </Root>
       </div>
     );
