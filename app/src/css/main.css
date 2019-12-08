@@ -1,0 +1,465 @@
+
+body, html {
+  background-color: var(--background_page);
+}
+
+body, html {
+  height: 100%;
+  background-color: #fff;
+}
+
+#root {
+  height: 100%;
+}
+
+.titlebar {
+  -webkit-user-select: none;
+  /* Включаем для того, чтобы за эту область можно было перетаскивать программу */
+  -webkit-app-region: drag;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 100;
+  background-color: rgb(74,118,168);
+  border-bottom: solid 1px #f0f0f0;
+}
+
+.titlebar button {
+  cursor: pointer;
+  color: #fff;
+}
+
+.titlebar .column-title {
+  flex: 1;
+  display: flex;
+}
+
+.titlebar .column-title.title {
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  padding-left: 25px;
+}
+
+.titlebar .column-title.window-controllers {
+  justify-content: flex-end;
+}
+
+/* Отключаем перетаскивание для некоторых элементов */
+button {
+  -webkit-app-region: no-drag;
+}
+
+.Panel--tm-gray .Panel__in {
+  background-color: rgb(237,238,240);
+  padding-top: 48px;
+}
+
+#root > div {
+  /* height: 100%; */
+}
+
+#root > div, .Root, .Panel{
+  /* min-height: 100%; */
+}
+
+body[scheme="space_gray"] .titlebar {
+  background-color: #19191A !important;
+  color: white !important;
+  border-bottom: none;
+}
+
+.Group {
+  border-radius: 4px;
+  box-shadow: 0 1px 0 0 var(--separator_common), 0 0 0 1px var(--separator_common);
+  border: none;
+}
+
+.div-center {
+    display: table;
+    margin: 0 auto;
+}
+
+.div-center img {
+    width: 10rem;
+}
+
+.buttons-group {
+    display: flex;
+}
+
+.buttons-group button:first-child {
+    margin-right: 8px;
+}
+
+a, div, img, p, button {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.View--android.View--header .FixedLayout--top  {
+  z-index: 100000;
+}
+
+.padding-fixed-content {
+  padding-top: 48px;
+}
+
+.acute {
+  border-radius: 0px;
+}
+
+.acute .FormField__border {
+  border-radius: 0px;
+}
+
+.white-TextArea {
+  background: transparent;
+  box-sizing: border-box;
+  padding-bottom: 12px;
+}
+
+.white-TextArea .FormField__border {
+  /*background: #fff;*/
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-bottom: 12px;
+}
+
+.white-TextArea textarea {
+  background-color: transparent;
+  outline: none;
+  min-height: 100% !important;
+  box-sizing: border-box;
+  max-height: 100% !important;
+}
+
+.white-TextArea-normal textarea,
+.white-TextArea-normal .FormField__border {
+  background-color: transparent;
+}
+
+.white-TextArea > .Textarea__el:focus~.FormField__border,
+.white-TextArea.FormField.Textarea,
+.white-TextArea-normal  > .Textarea__el:focus~.FormField__border,
+.white-TextArea-normal.FormField.Textarea{
+  background: transparent !important;
+}
+
+.full-height-group {
+  box-sizing: border-box;
+}
+
+.full-height-group .Group__content {
+  height: 100%;
+}
+
+.paste-button {
+  display: inline-flex;
+  justify-content: flex-end;
+  padding: 12px 12px;
+  position: fixed;
+  right: 0;
+  z-index: 100000;
+}
+
+.View--android.View--header .paste-button {
+  top: var(--panelheader_height_android);
+}
+
+.View--ios.View--header .paste-button {
+  top: var(--panelheader_height_ios);
+}
+
+.Button.white-button {
+  color: #5181B8;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+}
+
+.dark-root .Button.white-button {
+  background: transparent;
+}
+
+.tag.Button {
+  margin-left: 0px !important;
+  margin-right: 3px !important;
+  margin-bottom: 4px;
+}
+
+.tag.Button .Button__in {
+  padding: 2px 4px;
+  margin-right: 4px;
+}
+
+.tag.Button {
+  border-radius: 3px;
+}
+
+.full-server {}
+.full-server .full-server--title {
+  font-weight: normal;
+  font-size: 17px;
+  /*margin: 0;*/
+  /*padding: 0;*/
+}
+
+.full-server--prop {
+  display: flex;
+  color: var(--primary_text_color);
+  padding: 8px 0px;
+}
+
+.dark-root .full-server--prop .full-server--prop-content {
+  color: var(--primary_text_color);
+}
+
+.full-server--prop .full-server--prop-before {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  color: var(--tabbar_active_icon);
+  justify-content: center;
+}
+
+.full-server--prop .full-server--prop-content {
+  flex: auto;
+  padding: 4px 4px;
+  font-size: 16px;
+  color: var(--primary_text_color);
+  margin-left: 16px;
+}
+
+.Button .Spinner {
+  color: #fff;
+}
+
+.dark-root .Button .Spinner {
+  color: #333;
+}
+
+
+.description-tag-group {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #818C99;
+}
+
+.FixedLayout--top .Tabs--android, .FixedLayout--bottom .Tabs--android {
+  /*box-shadow: none;*/
+}
+
+.Tabs--android.Tabs--header .TabsItem--selected .TabsItem__in {
+  /*font-weight: bold;*/
+}
+
+.Group {
+  margin-top: 0px;
+}
+
+.Group--android.margins {
+  margin-top: 8px;
+}
+
+.Panel.centering-panel .Panel__in {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  font-size: 13px;
+  color: var(--text_secondary);
+}
+
+.tag {
+  display: inline-flex;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: solid 1px var(--separator_common);
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+  cursor: pointer;
+}
+
+.tag .tag-before {
+  padding-right: 8px;
+}
+
+.tag.active {
+  background-color: var(--button_primary_background);
+  color: var(--button_primary_foreground);
+  border-color: transparent;
+}
+
+.tag.active.red {
+  background-color: var(--destructive);
+  color: #fff;
+}
+
+.tag.active.green {
+  background-color: var(--field_valid_border);
+  color: #fff;
+}
+
+.Snackbar--android .Snackbar__in {
+  animation: animation-snackbarIntro 340ms var(--android-easing);
+}
+
+.Snackbar--android .Snackbar__body {
+  border-radius: 8px;
+}
+
+/**
+ * Touch-interaction
+ */
+.Snackbar--touched .Snackbar__body {
+  transition: none;
+}
+
+.Snackbar--closing .Snackbar__in {
+  transform: translate3d(0, 140vh, 0);
+}
+
+.button-secondary-tertiary {
+  color: var(--text_secondary);
+  padding: 0px 0px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+}
+
+.Cell.no-padding-right .Cell__in {
+  padding-right: 4px;
+}
+
+/**
+ * Animations
+ */
+@keyframes animation-snackbarIntro {
+  from {
+    transform: translate3d(0, 80vh, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.description {
+  font-size: 13px;
+  color: var(--text_secondary);
+}
+
+/*.Snackbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  border: solid 1px var(--separator_common);
+}*/
+
+
+.Snackbar__body {
+  box-shadow: none;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+  /*border: solid 1px var(--separator_common);*/
+}
+  
+
+.separated-group {
+  box-shadow: none;
+  border-top: solid 1px #EBECEC;
+}
+
+
+
+/*.Snackbar__in {
+  overflow: hidden;
+}*/
+
+
+.no-padding {
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 320px) {
+  .tag {
+    font-size: 15px;
+  }
+}
+
+.ModalPage__content-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Button {
+  cursor: pointer;
+}
+
+.centered {
+  text-align: center;
+}
+
+.Link {
+  cursor: pointer;
+}
+
+.Link:hover {
+  opacity: 0.8;
+}
+
+.View--android .View__panel--next ~ .View__panel--prev {
+  /* animation: animation-android-prev-back-to .3s var(--android-easing) !important; */
+}
+
+.View--android .View__panel--prev ~ .View__panel--next {
+  /* animation: animation-android-next-forward-to .3s var(--android-easing) !important; */
+}
+
+ 
+
+.container-after-titlebar {
+  overflow: overlay !important;
+  position: relative !important;
+}
+
+
+body {
+  overflow: overlay !important;
+}
+
+body::-webkit-scrollbar { width: 0 !important }
+
+.titlebar {
+  position: fixed !important;
+}
+
+/* .View--animated,
+.View--swiping-back {
+  overflow:  auto !important;
+}
+
+.View--animated .View__panel,
+.View--swiping-back .View__panel {
+  overflow: auto !important;
+} */
+
+.no-shadow-fixed-layout .Tabs--android {
+  box-shadow: 0px 0px 1px var(--separator_common);
+}

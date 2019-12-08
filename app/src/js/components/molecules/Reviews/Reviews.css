@@ -1,0 +1,39 @@
+.server-review {
+  margin-bottom: 12px;
+  display: block;
+  /*padding-bottom: 16px;*/
+}
+
+.server-review--separator {
+  margin-top: 12px;
+}
+
+.server-review:first-child {
+  margin-top: 12px;
+}
+
+*:last-child > .server-review:last-child {
+  padding-bottom: 28px;
+}
+
+.server-review .server-review--text {
+  padding: 0px 16px;
+  font-size: 14px;
+}
+
+.server-review--author {
+  font-size: 15px;
+}
+
+.star {
+  margin-right: 4px;
+}
+
+.star.active {
+  color: var(--tabbar_active_icon);
+}
+
+.created {
+  font-size: 12px;
+  margin-left: 4px;
+}

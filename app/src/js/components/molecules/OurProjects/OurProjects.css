@@ -1,0 +1,30 @@
+.our-projects {
+  display: flex;
+  padding: 0px 0px 12px 12px;
+}
+
+.our-projects--item {
+  display: block;
+  width: 72px;
+  /*padding: 0px 12px;*/
+  min-height: 88px;
+}
+
+.our-projects--item-cover img {
+  max-width: 100%;
+}
+
+.our-projects--item-cover {
+  background-color: var(--background_page);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 56px;
+  width: 56px;
+  margin: 0 auto;
+}
+
+.our-projects--item-title {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+}

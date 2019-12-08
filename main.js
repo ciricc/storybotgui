@@ -13,7 +13,7 @@ var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
 
 // console.log(isDev)
 // Let electron reloads by itself when webpack watches changes in ./app/
-if (isDev) { require('electron-reload')(__dirname) }
+if (isDev) { require('electron-reload')(__dirname + '/app') }
 
 const log = require('electron-log');
 
@@ -27,7 +27,9 @@ function createWindow () {
     frame: false,
     resizeable: false,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webviewTag: true,
+      preload: './preload.js'
     }
   });
 
@@ -50,14 +52,14 @@ function createWindow () {
     ipcMain.on(listener.channel, (...data) => {
       listener.listener({
         win: mainWindow
-      }, ...data)
+      }, data[1], data[0])
     });
   })
 
   mainWindow.setResizable(false);
   mainWindow.setMenu(null);
 
-  mainWindow.loadURL(`file://${__dirname}/app/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/app/bind.html`)
 }
 
 app.on('ready', createWindow)

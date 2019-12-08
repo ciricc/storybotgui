@@ -1,0 +1,118 @@
+body {
+  --minecraft-color-black: #000000;
+  --minecraft-color-blue: #0000AA;
+  --minecraft-color-green: #00AA00;
+  --minecraft-color-emerald: #00AAAA;
+  --minecraft-color-red: #AA0000;
+  --minecraft-color-purple: #AA00AA;
+  --minecraft-color-orange: #FFAA00;
+  --minecraft-color-gray: #AAAAAA;
+  --minecraft-color-space-gray: #555555;
+  --minecraft-color-water: #5555FF;
+  --minecraft-color-light-green: #55FF55;
+  --minecraft-color-diamond: #55FFFF;
+  --minecraft-color-scarlet: #FF5555;
+  --minecraft-color-pink: #FF55FF;
+  --minecraft-color-yellow: #FFFF55;
+  --minecraft-color-white: #FFFFFF;
+}
+
+.MinecraftCode.black {
+  color: var(--minecraft-color-black);
+}
+
+.MinecraftCode.blue {
+  color: var(--minecraft-color-blue);
+}
+
+.MinecraftCode.green {
+  color: var(--minecraft-color-green);
+}
+
+.MinecraftCode.emerald {
+  color: var(--minecraft-color-emerald);
+}
+
+.MinecraftCode.red {
+  color: var(--minecraft-color-red);
+}
+
+.MinecraftCode.purple {
+  color: var(--minecraft-color-purple);
+}
+
+.MinecraftCode.orange {
+  color: var(--minecraft-color-orange);
+}
+
+.MinecraftCode.gray {
+  color: var(--minecraft-color-gray);
+}
+
+.MinecraftCode.space-gray {
+  color: var(--minecraft-color-space-gray);
+}
+
+.MinecraftCode.water {
+  color: var(--minecraft-color-water);
+}
+
+.MinecraftCode.light-green {
+  color: var(--minecraft-color-light-green);
+}
+
+.MinecraftCode.diamond {
+  color: var(--minecraft-color-diamond);
+}
+
+.MinecraftCode.scarlet {
+  color: var(--minecraft-color-scarlet);
+}
+
+.MinecraftCode.pink {
+  color: var(--minecraft-color-pink);
+}
+
+.MinecraftCode.yellow {
+  color: var(--minecraft-color-yellow);
+}
+
+.MinecraftCode.white {
+  color: var(--minecraft-color-white);
+}
+
+.MinecraftCode.bold {
+  font-weight: bold;
+}
+
+.MinecraftCode.underline {
+  text-decoration: underline;
+}
+
+.MinecraftCode.line-through {
+  text-decoration: line-through;
+}
+
+.MinecraftCode.italic {
+  font-style: italic;
+}
+
+.MinecraftCode.obfuscate {
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.MinecraftCode .letter {
+  min-width: 6px;
+  width: 6px;
+  display: inline-block;
+  min-height: 16px;
+}
+
+.MinecraftCode .letter:first-child {
+  margin-left: 4px;
+}
+
+.MinecraftCode .letter:last-child {
+  margin-right: 4px;
+}

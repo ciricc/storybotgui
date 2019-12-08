@@ -6,12 +6,15 @@ module.exports = {
 
     target: 'electron-renderer',
 
-    entry: './app/src/index.js',
+    entry: {
+        main: './app/src/index.js',
+        window: './app/src/window.js'
+    },
 
     output: {
         path: __dirname + '/app/build',
         publicPath: 'build/',
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
 
     module: {
@@ -39,7 +42,7 @@ module.exports = {
 
     plugins: [
         new ExtractTextPlugin({
-            filename: 'bundle.css',
+            filename: '[name].bundle.css',
             disable: false,
             allChunks: true
         })

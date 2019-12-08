@@ -1,0 +1,136 @@
+.server-item {
+  display: block;
+  box-sizing: border-box;
+  padding: 12px 12px;
+  margin: 0;
+  /*border-bottom: solid 1px var(--separator_common);*/
+  /*background: #fff;*/
+  /*margin-top: 8px;*/
+  /*margin-bottom: 8px;*/
+}
+
+.server-item .server-item--title {
+  padding: 8px 0px;
+  font-size: 17px;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: flex;
+  margin-top: 8px;
+}
+
+.server-item .server-item--favicon {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 12px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.1); 
+  flex: 1;
+  min-width: 48px;
+  padding: 4px 4px;
+}
+
+.server-item .server-item--title .server-item--name {
+  padding: 0px 0px 0px 0px;
+  flex: 10;
+  margin-top: 4px;
+  /*border-bottom: solid 1px var(--separator_common);*/
+}
+
+.server-item .server-item--cover {
+  padding: 0px 0px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+  height: 38px;
+  margin-bottom: 12px;
+}
+
+.server-item .server-item--cover img {
+  max-width: 100%;
+}
+
+.server-item .server-item--tags .Button {
+  display: inline-block;
+  margin-right: 6px;
+  margin-left: 0px;
+  margin-bottom: 6px;
+}
+
+.server-item .server-item--tags .Button .Button__in {
+  padding: 1px 4px;
+}
+
+.server-item--status {
+  display: flex;
+  padding: 8px 4px;
+}
+
+.server-item--status-item {
+  display: flex;
+  margin-right: 12px;
+  text-align: left;
+}
+
+.server-item--status-item-icon {
+  width: 18px;
+  margin-right: 4px;
+  color: var(--text_secondary);
+  font-size: 14px;
+}
+
+.server-item--status-item-icon.red {
+  color: #F44336;
+}
+
+.server-item--status-item-icon.green {
+  color: #16C60C;
+}
+
+.server-item--status-item-icon.gray {
+  color: var(--text_tertiary);
+}
+
+.server-item--status-item-icon.orange {
+  color: #FFB300;
+}
+
+.server-item--status-item-content {
+  flex: 2;
+  margin-left: 1px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.server-item .server-item--ip .Button {
+  font-size: 13px;
+  text-transform: lowercase;
+  margin-left: 0px;
+  margin-top:-2px;
+  display: inline;
+  align-self: flex-start;
+}
+
+.server-item .server-item--ip .Button .Button__in {
+  padding: 8px 8px;
+}
+
+/*.dark-root .server-item {
+  border-bottom-color: var(--separator_common);
+}*/
+
+.server-item--status-item-row {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.server-item--status-item-row.buttons {
+  margin-top: 12px;
+}
+
+.server-item--status-item-row.buttons .Button {
+  margin-right: 4px;
+}
+
+.server-item--status-item-row.buttons > .Button:last-child {
+  margin-right: 0px;
+  margin-left: 4px;
+}

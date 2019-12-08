@@ -1,0 +1,66 @@
+.server-rating {
+  display: flex;
+  flex-direction: column;
+}
+
+.server-rating .server-rating--full {
+  display: flex;
+}
+
+.server-rating .server-rating--full .server-rating--full-rate {
+  font-size: 54px;
+  font-weight: bold;
+  flex: 1;
+}
+
+.server-rating .server-rating--full .server-rating--full-total-count {
+  color: var(--text_secondary);
+  font-size: 14px;
+  flex: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 16px;
+}
+
+.server-rating .server-rating--full .server-rating--full-total-count:last-child {
+  margin-bottom: 0px;
+}
+
+.server-rating--percents {
+  display: block;
+}
+
+.server-rating--percents .server-rating--percent {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.server-rating--percents .server-rating--percent .server-rating--percent-before {
+  font-size: 14px;
+  color: var(--text_secondary);
+  margin-right: 8px; 
+}
+
+.server-rating--percents .server-rating--percent .server-rating--percent-after {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 8px;
+  min-width: 28px;
+}
+
+.server-rating--percents .server-rating--percent-range {
+  flex: 1;
+}
+
+.server-rating--percents .server-rating--percent-range .Progress {
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.server-rating--percents .server-rating--percent-range .Progress,
+.server-rating--percents .server-rating--percent-range .Progress__in {
+  height: 6px;
+}

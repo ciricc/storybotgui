@@ -1,0 +1,25 @@
+.error-page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: var(--background_page);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  color: var(--text_primary);
+  text-align: center;
+  flex-direction: column;
+}
+
+.error-page img {
+  margin-bottom: 48px;
+  max-width: 100%;
+}
+
+.error-page--message {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}

@@ -1,0 +1,12 @@
+.account-form {
+  width: 45vw;
+  height: auto;
+  padding: 24px 24px;
+  background-color: var(--modal_card_background);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+}

@@ -1,0 +1,128 @@
+.bottom-header-wrap {
+	display: flex;
+	align-items: center;
+
+	height: 52px;
+	background-color: var(--header_alternate_background);
+	width: 100vw;
+	color: var(--tabbar_inactive_icon);
+	padding: 0px 0px;
+	box-sizing: border-box;
+	font-weight: bold;
+	font-size: 14px;
+	box-shadow: 0px -2px 3px rgba(0,0,0,.08);
+}
+
+.bottom-header-wrap {
+	/*box-shadow: none;*/
+	/*border-bottom: solid 1px #F9F9F9;*/
+	/*box-shadow: 0px 0px 5px rgba(0,0,0,.05);*/
+}
+
+.dark-root .View--ios .bottom-header-wrap,
+.dark-root .View--android .bottom-header-wrap,
+.dark-root .PanelHeader--android .PanelHeader-bg{
+	border-bottom: solid 1px var(--header_background);
+}
+
+.PanelHeader--android .PanelHeader-bg--no-shadow {
+	border-bottom: none;
+}
+
+.bottom-header-wrap--items {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	padding: 8px 0px 8px 0px;
+}
+
+.bottom-header--activer {
+	display: block;
+	content: "";
+	width: 0px;
+	/*position: absolute;*/
+	bottom: 0;
+	height: 2px;
+	border-radius: 1px;
+	/*border-top-left-radius: 3px;*/
+	/*border-top-right-radius: 3px;*/
+	background: var(--accent);
+	/*margin-bottom: 0px;*/
+	left: 0;
+	margin-top: -2px;
+	transition: width .3s, transform .2s;
+}
+
+.bottom-header--activer.animating {
+	transition: transform .3s, width .3s;
+}
+
+.bottom-header-wrap--item {
+	margin-left: 4px;
+	margin-right: 16px;
+	flex-shrink: 0;
+}
+
+.bottom-header-wrap--item:first-child {
+	margin-left: 16px;
+}
+
+.bottom-header-wrap--item:last-child {
+	margin-right: 8px;
+}
+
+.bottom-header-wrap--item .Button {
+	border-radius: 0px;
+	background-color: var(--header_background);
+	background-color: #fff;
+	color: var(--tabbar_inactive_icon);
+	overflow: hidden;
+}
+
+
+.bottom-header-wrap--item .Button .Tappable__waves  {
+	display: none;
+}
+
+.bottom-header-wrap--item:last-child .Button {
+	margin-right: 16px;
+}
+
+.bottom-header-wrap--item.active{
+	color: var(--tabbar_active_icon);
+	background: transparent;
+	/*border-color: var(--header_background);*/
+}
+
+.bottom-header-wrap--item .Button .Button__content {
+	/*font-weight: 500;*/
+	color: var(--tabbar_inactive_icon);
+}
+
+.bottom-header-wrap--item.active .Button .Button__content {
+	/*font-weight: bold;*/
+	color: var(--accent);
+}
+
+.bottom-header-wrap--item.active .Tappable--active {
+	opacity: 1 !important;
+}
+
+.HorizontalScroll__in {
+	padding-right: 10px;
+}
+
+.dark-root .bottom-header-wrap {
+	background-color: var(--header_alternate_background);
+	border-bottom-color: var(--header_alternate_background);
+}
+
+.dark-root .bottom-header-wrap--item .Button {
+	color: var(--color_text_primary);
+	background-color: var(--header_background);
+	border: none;
+}
+
+.dark-root .bottom-header-wrap--item.active .Button {
+	color: var(--accent);
+}
